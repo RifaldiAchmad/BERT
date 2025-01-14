@@ -75,7 +75,7 @@ def loadCorpus(lan = 'en'):
             corpus = pickle.load(f); f.close()
         except:
             corpus = stopWordsID
-            sw = loadText('data/stopwords_id.txt')
+            sw = loadText('/content/BERT/stopwords_id.txt')
             sw = set([w.lower().strip() for w in sw])
             corpus = corpus.union(sw)
             corpus = corpus.union(slangS.values())
